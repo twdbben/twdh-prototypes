@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="shortcut icon" href="../images/twdh.ico" />
+		<title>Upload First Workflow Prototype</title>
+		<link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>TWDH Prototype</h1>
+      <h2>Upload-First Dataset Workflow</h2>
+    </div>
+    <div class="wrapper">
+      <div class="description">
+        <h3>Overview</h3>
+        <ul>
+          <li>Completion of this workflow will result in a published dataset with a single resource</li>
+          <li>The same workflow pages will be used for adding a new dataset and editing an existing one</li>
+          <li>When a dataset author opts to 'Save and exit' before publishing a dataset ... 
+            <ul>
+              <li>they land on their profile page with the dataset they were working on listed as a 'Draft'</li>
+              <li>when they are ready to return to editing a 'Draft' dataset, they select it from the list in their 'Profile' and should land on the first workflow page containing incomplete data</li>
+            </ul>
+          </li>
+          <li>Authors can navigate freely between completed workflow pages in a draft dataset</li>
+          <li>When editing (as opposed to creating) a dataset, the check marks that indicate progress in the navigation bar return to being numbers</li>
+          <li>When creating a dataset, an activity stream event should be logged upon dataset publication</li>
+          <li>When editing a dataset, an activity stream event should be logged for any and all field updates</li>
+        </ul>
+      </div>
+      <a class="btn btn-primary" href="./one.html">Begin Workflow</a>
+      <div class="description">
+        <h3>Questions</h3>
+        <ul>
+          <li>Do we want a 'Cancel' or 'Delete Draft' button to bail out of a partially created dataset?</li>
+          <li>How do we handle a dataset author leaving a partially filled in workflow page without clicking 'Save' or 'Next'? Warning dialog? Allow and do nothing (discarding partial data)?</li>
+          <li>What happens when a resource file/link is updated? Are relevant date fields updated automatically? Is there any trigger to prompt author to review data dictionary, etc if data fields have been updated?</li>
+          <li>What happens on the data dictionary page when the resource is not a tabular file type?</li>
+          <li>Does Next/Publish button become 'Update' when editing an existing dataset, or do you still have to 'Next' through the pages?</li>
+          <li>How does Datapusher fit in? Is a push triggered on completion of step 1? At what point are Datapusher errors handled?</li>
+          <li>Responsive version? Vertical expansion-tab interface with nav bar rotated 90 degrees should work ... </li>
+          <li>Visibility: Public/Private field missing from wireframes?
+        </ul>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>

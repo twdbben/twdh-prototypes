@@ -1,0 +1,507 @@
+html
+{
+
+  /* 
+   * This sets font-size so that when a browser default size is set to 16px, then 1em = 10px 
+   * We want to use em and rem for font size specifications everywhere else for accessibility
+   */
+
+  font-size: 62.5%
+
+}
+
+body 
+{
+
+  font-family: "Quicksand", "Helvetica", "Arial", sans-serif;
+  font-size: 1.6em;
+  line-height: 1.35em;
+  min-width: 320px;
+  color: #59555B;
+	margin: 5%;
+
+}
+
+.toc
+{
+
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+
+.nav
+{
+
+	clear: both;
+	padding: 0;
+	list-style: none;
+	display: inline;
+	box-sizing: content-box;
+
+}
+
+/* Eliminate space between li elements */
+.nav-pills>li+li{
+    margin:0px;
+}
+
+.nav li
+{
+
+	box-sizing: content-box;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 14rem;
+	text-align: center;
+
+}
+
+.nav li a
+{
+
+	display: block;
+	padding: 0;
+	cursor: default;
+	color: #A39CA5;
+
+}
+
+.nav li a:hover
+{
+
+	background: transparent;
+
+}
+
+.nav .complete a
+{
+
+  padding: 1rem 0;
+  color: #59555B;
+	cursor: pointer;
+
+}
+
+.nav .complete a:hover
+{
+
+	background: #e0e0e0;
+
+}
+
+.nav .incomplete 
+{
+
+	cursor: not-allowed;
+
+}
+
+.nav .tab-number 
+{
+
+	background-image: url( ../images/bg-incomplete.png );
+	background-repeat: repeat-x;
+
+}
+
+.nav .complete .tab-number 
+{
+
+	background-image: url( ../images/bg-complete.png );
+	background-repeat: repeat-x;
+
+}
+
+.nav .in-progress,
+.nav .incomplete 
+{
+
+  padding: 1rem 0;
+
+}
+
+.nav .in-progress .tab-number 
+{
+
+	background-image: url( ../images/bg-in-progress.png );
+	background-repeat: repeat-x;
+	background-size: 100% 100%;
+
+}
+
+.nav li:first-child.in-progress .tab-number 
+{
+
+	background-image: url( ../images/bg-incomplete.png );
+	background-repeat: no-repeat;
+	background-size: 50% 100%;
+	background-position: right;
+
+}
+
+.nav li:first-child.complete .tab-number 
+{
+
+	background-image: url( ../images/bg-complete.png );
+	background-repeat: no-repeat;
+	background-size: 50% 100%;
+	background-position: right;
+
+}
+
+.nav li:last-child .tab-number 
+{
+
+	background-image: url( ../images/bg-incomplete.png );
+	background-repeat: no-repeat;
+	background-size: 50% 100%;
+	background-position: left;
+
+}
+
+.nav li:last-child.in-progress .tab-number 
+{
+
+	background-image: url( ../images/bg-complete.png );
+	background-repeat: no-repeat;
+	background-size: 50% 100%;
+	background-position: left;
+
+}
+
+.nav .tab-number span
+{
+
+	display: block;
+	text-align: center;
+	border-radius: 4rem;
+	height: 3rem;
+	width: 3rem;
+	font-weight: 700;
+
+	line-height: 2.8rem;
+	margin: 1rem auto;
+
+	border: 1px solid #A39CA5;
+	background: #fff;
+	color: #A39CA5;
+
+	cursor: not-allowed;
+}
+
+.nav .in-progress .tab-number span
+{
+
+	background: #0B7D8E;
+	border-color: #0B7D8E;
+	color: #fff;
+	cursor: default;
+
+
+}
+
+.nav .complete .tab-number span
+{
+
+	background: #0B7D8E;
+	border-color: #0B7D8E;
+	color: #fff;
+	cursor: pointer;
+
+}
+
+.nav-footer li
+{
+
+	width: 25%;
+
+}
+
+.nav-footer li .btn,
+.nav-footer li a
+{
+
+	width: 90%;
+	margin: 0.5rem auto;
+  padding: 1rem 0;
+
+}
+
+.nav-footer li a:hover
+{
+
+  text-decoration: underline;
+
+}
+
+.nav-footer li a:focus
+{
+
+  background: transparent;
+  border: none;
+
+}
+
+.nav-footer li:last-child,
+.nav-footer li:nth-last-child(2)
+{
+
+	float: right;
+
+}
+
+.btn
+{
+
+
+}
+
+.nav-pills > li > .btn
+{
+
+  padding: 1rem 0;
+	border-radius: 0.8rem;
+
+}
+
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover
+{
+
+  background-color: #0C142D;
+  color: #ffffff;
+
+}
+
+
+.btn-primary
+{
+
+  color: #ffffff;
+  background: #0D2856;
+  border-color: #0D2856;
+
+}
+
+.btn-primary:hover
+{
+
+  color: #ffffff;
+  background: #0C142D;
+  border-color: #0C142D;
+
+
+}
+
+
+.btn-secondary,
+.btn.btn-secondary
+{
+
+  color: #0B7D8E;
+  border: 0.1rem solid  #0B7D8E;
+  background-color: #ffffff;
+  text-decoration: none;
+  line-height: 2rem;
+
+}
+
+.btn-secondary:hover,
+.btn.btn-secondary:hover,
+.btn-secondary:focus,
+.btn.btn-secondary:focus,
+.btn-secondary:active,
+.btn.btn-secondary:active,
+.btn.btn-success,
+.btn.btn-success.active,
+.btn.btn-secondary.active.btn-success
+{
+
+  color: #0B7D8E;
+
+  border: 0.2rem solid  #0B7D8E;
+  /* avoid 'jump' caused by changing border width */
+  line-height: 1.8rem;
+
+  background-color: #ffffff;
+  text-decoration: underline;
+
+}
+
+.btn-secondary:active,
+.btn.btn-secondary:active,
+.btn.btn-secondary.active
+{
+
+  color: #fff;
+  background-color: #0B7D8E;
+
+  -moz-box-shadow: 0 0 0 4px #D9EEF3;
+  -webkit-box-shadow: 0 0 0 4px #D9EEF3;
+  box-shadow: 0 0 0 4px #D9EEF3;
+
+  outline: none;
+
+}
+.btn-tertiary,
+.btn-tertiary:hover
+{
+
+  background-color: #ffffff;
+  color: #0B7D8E;
+  border-color: #0B7D8E;
+  text-decoration: none;
+
+}
+
+.btn-tertiary.active,
+.btn-tertiary.active:hover,
+.btn-tertiary.focus
+{
+
+  color: #ffffff;
+  background-color: #0B7D8E;
+  border-color: #0B7D8E;
+  text-decoration: none;
+
+}
+
+.btn-disabled,
+.btn-disabled:hover
+{
+
+	border: 0.1rem solid #E0E0E0;
+	background: #E0E0E0;
+	color: #A39CA5;
+	cursor: not-allowed;
+
+}
+
+h4
+{
+
+  font-family: "Lora", "Georgia", serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+
+}
+
+
+form.placeholder fieldset
+{
+
+	margin: 5% 2%;
+  font-size: 2em;
+	text-align: center;
+	color: #e0e0e0;
+
+}
+
+form input[type="text"],
+form select.form-control
+{
+
+	width: 90%;
+	border-radius: 0.8rem;
+	border: 1px solid #0D2856;
+	line-height: 0.5rem;
+	padding: 6px 12px;
+	font-size: 1.4rem;
+
+}
+
+form fieldset ul
+{
+
+	list-style: none;
+
+}
+
+form fieldset ul li
+{
+
+	padding: 1rem 0;
+
+}
+
+form fieldset ul li .btn-secondary
+{
+
+	width: 10rem;
+
+}
+
+.field-direction
+{
+
+	color: #A5A09C;
+	font-size: 1.4rem;
+
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder 
+{
+
+  color: #59555B;
+  opacity: 1; /* Firefox */
+
+}
+
+/* Internet Explorer 10-11 */
+::-ms-input-placeholder
+{
+  
+  color: #59555B;
+
+}
+
+/* Microsoft Edge */
+::-ms-input-placeholder 
+{
+
+  color: #59555B;
+
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #999;
+}
+
+div.wrapper
+{
+
+  width: 840px;
+  margin: 2% auto;
+
+}
+
+.description 
+{
+
+  border: .3rem dotted  #0B7D8E;
+  border-radius: 0.8rem;
+	margin: 2rem auto;
+	padding: 1rem;
+	max-width: 84rem;
+
+}
+
+.description li
+{
+
+	padding-bottom: 0.5rem;
+
+}
+
+
+.description h3
+{
+
+	margin: .5rem;
+	padding; 0;
+
+}

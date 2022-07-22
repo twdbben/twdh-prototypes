@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="shortcut icon" href="../images/twdh.ico" />
+		<title>Upload First Workflow Prototype</title>
+		<link href="../css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>TWDH Prototype</h1>
+      <h2>Upload-First Dataset Workflow</h2>
+      <ul class="nav nav-pills nav-header">
+        <li class="in-progress">
+          <div class="tab-number"><span>1</span></div>
+          Add<br/>Resource
+        </li>
+        <li class="incomplete">
+          <div class="tab-number"><span>2</span></div>
+          Data</br>Dictionary
+        </li>
+        <li class="incomplete">
+          <div class="tab-number"><span>3</span></div>
+          Spatial</br>Information
+        </li>
+        <li class="incomplete">
+          <div class="tab-number"><span>4</span></div>
+          Description</br>Information
+        </li>
+        <li class="incomplete">
+          <div class="tab-number"><span>5</span></div>
+            Quality & Usage Information
+        </li>
+        <li class="incomplete">
+          <div class="tab-number"><span>6</span></div>
+          Additional</br>Information
+        </li>
+      </ul>
+      <h4>Add Resource</h4>
+      <form action="./two.html">
+        <fieldset>
+          <ul>
+            <li>
+              <label class="control-label" for="field-title">Title</label>
+              <div class="controls">
+                <input name="field-title" type="text" class="form-control" placeholder="" />
+                <div class="field-direction">
+                  A clear and descriptive title to represent the data
+                </div>
+              </div>
+            </li>
+            <li>
+              <button class="btn btn-tertiary active" onclick="return false;"><i class="fa fa-plus" aria-hidden="true"></i> Add Collaborators</button>
+            </li>
+            <li>
+              <label class="control-label" for="field-resource-type">Resource Type</label>
+              <div class="controls">
+                <select name="field-resource-type" type="text" class="form-control">
+                  <option value=""></option>
+                  <option value="api">API</option>
+                  <option value="interactive-map">Interactive Map</option>
+                  <option value="sensor">Sensor</option>
+                </select>
+                <div class="field-direction">
+                  Type of resource being added
+                </div>
+              </div>
+            </li>
+            <li>
+              <button class="btn btn-secondary" onclick="return false;"><i class="fa fa-link" aria-hidden="true"></i> Link</button>
+              <button class="btn btn-secondary" onclick="return false;"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
+            </li>
+          </ul>
+        </fieldset>
+        <ul class="nav nav-pills nav-footer">
+          <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
+        </ul>
+        <ul class="nav nav-pills nav-footer">
+          <li><button type="submit" class="btn btn-primary">Next</button></li>
+          <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
+        </ul>
+      </form>
+      <div class="description">
+        <h3>Step 1: Add Resource</h3>
+        <ul>
+          <li>Questions
+            <ul>
+              <li>Once a dataset has been created and the author returns to this page to edit the resource, should 'Add Resource' change to  'Manage Resource' or similar?</li>
+              <li>Does a 'Previous' button make sense on this workflow page given that it is the first page? If so, where does it go? Back in history like back button would, or to user profile page? Seems best with no 'Previous' button here to me.</li>
+              <li>Do we want a URL indicator / slug edit field below the title like in standard CKAN?</li>
+              <li>Can we add collaborators on this page? What impact does it have to add collaborators before the dataset is published?</li>
+            </ul>
+          </li>
+          <li>Validation Criteria
+            <ul>
+              <li>'Title' field set to ... length? illegal characters?</li>
+              <li>'Resource Type' field set to one (or more?) of the options</li>
+              <li>'Add Resource' upload or link chosen ...
+                <ul>
+                <li>If upload ...</li>
+                <li>If link ...</li>
+                </ul>
+            </ul>
+          </li>
+          <li>Activity Stream
+            <ul>
+            <li>'Title' update</li>
+            <li>'Collaborator' add/remove</li>
+            <li>'Resource Type' update</li>
+            <li>New data file uploaded</li>
+            <li>Link changed</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.js"></script>
+  </body>
+</html>
+
