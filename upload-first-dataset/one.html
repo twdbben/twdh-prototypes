@@ -15,8 +15,8 @@
   </head>
   <body>
     <div class="wrapper">
-      <h1>TWDH Prototype</h1>
-      <h2>Upload-First Dataset Workflow</h2>
+      <h1><a href="../index.html">TWDH Prototypes</a></h1>
+      <h2><a href="./index.html">Upload-First Dataset Workflow</a></h2>
       <ul class="nav nav-pills nav-header">
         <li class="in-progress">
           <div class="tab-number"><span>1</span></div>
@@ -51,13 +51,13 @@
               <label class="control-label" for="field-title">Title</label>
               <div class="controls">
                 <input name="field-title" type="text" class="form-control" placeholder="" />
-                <div class="field-direction">
+                <div class="field-instruction">
                   A clear and descriptive title to represent the data
                 </div>
               </div>
             </li>
             <li>
-              <button class="btn btn-tertiary active" onclick="return false;"><i class="fa fa-plus" aria-hidden="true"></i> Add Collaborators</button>
+              <button class="btn btn-tertiary active" onclick="return false;"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add Collaborators</button>
             </li>
             <li>
               <label class="control-label" for="field-resource-type">Resource Type</label>
@@ -68,14 +68,17 @@
                   <option value="interactive-map">Interactive Map</option>
                   <option value="sensor">Sensor</option>
                 </select>
-                <div class="field-direction">
+                <div class="field-instruction">
                   Type of resource being added
                 </div>
               </div>
             </li>
             <li>
-              <button class="btn btn-secondary" onclick="return false;"><i class="fa fa-link" aria-hidden="true"></i> Link</button>
-              <button class="btn btn-secondary" onclick="return false;"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
+              <label class="control-label" for="field-resource-type">Add Resource</label>
+              <div class="controls">
+                <button class="btn btn-secondary btn-narrow" onclick="return false;"><i class="fa fa-link" aria-hidden="true"></i> Link</button>
+                <button class="btn btn-secondary btn-narrow" onclick="return false;"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
+              </div>
             </li>
           </ul>
         </fieldset>
@@ -92,15 +95,15 @@
         <ul>
           <li>Questions
             <ul>
-              <li>Once a dataset has been created and the author returns to this page to edit the resource, should 'Add Resource' change to  'Manage Resource' or similar?</li>
-              <li>Does a 'Previous' button make sense on this workflow page given that it is the first page? If so, where does it go? Back in history like back button would, or to user profile page? Seems best with no 'Previous' button here to me.</li>
-              <li>Do we want a URL indicator / slug edit field below the title like in standard CKAN?</li>
+              <li>Do we want a URL indicator / slug edit field below the title like in standard CKAN? Yes</li>
               <li>Can we add collaborators on this page? What impact does it have to add collaborators before the dataset is published?</li>
+              <li>Need to resolve how to allow for maintenance of multiple datasets while also discouraging the use of multiple datasets</li>
             </ul>
           </li>
           <li>Validation Criteria
             <ul>
-              <li>'Title' field set to ... length? illegal characters?</li>
+              <li>'Title' field set to ... length? illegal characters? unique?</li>
+              <li>URL slug ... must be unique? allowed to change after initial creation?</li>
               <li>'Resource Type' field set to one (or more?) of the options</li>
               <li>'Add Resource' upload or link chosen ...
                 <ul>
@@ -111,11 +114,12 @@
           </li>
           <li>Activity Stream
             <ul>
-            <li>'Title' update</li>
+            <li>'Title' change</li>
+            <li>'URL slug' change</li>
             <li>'Collaborator' add/remove</li>
-            <li>'Resource Type' update</li>
-            <li>New data file uploaded</li>
-            <li>Link changed</li>
+            <li>'Resource Type' change</li>
+            <li>New resource file uploaded</li>
+            <li>Resource link changed</li>
             </ul>
           </li>
         </ul>
@@ -125,6 +129,8 @@
     <script src="../js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../js/bootstrap.js"></script>
+    <!-- TWDH Javascript -->
+    <script src="../js/twdh.js"></script>
   </body>
 </html>
 

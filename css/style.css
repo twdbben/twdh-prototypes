@@ -30,6 +30,38 @@ body
 
 }
 
+.warning
+{
+
+  color: #FF715B;
+  font-size: 1.4rem;
+
+}
+
+.title-warning
+{
+
+  float: left;
+  margin: 1rem 0 1rem 2rem;
+
+}
+
+.label-warning
+{
+
+  background: transparent;
+  margin: 0 0 0 2rem;
+
+}
+
+
+
+.float-left
+{
+
+  float: left;
+}
+
 .nav
 {
 
@@ -42,11 +74,11 @@ body
 }
 
 /* Eliminate space between li elements */
-.nav-pills>li+li{
+.nav-header>li+li{
     margin:0px;
 }
 
-.nav li
+.nav-header li
 {
 
 	box-sizing: content-box;
@@ -58,7 +90,7 @@ body
 
 }
 
-.nav li a
+.nav-header li a
 {
 
 	display: block;
@@ -255,10 +287,12 @@ body
 .btn
 {
 
+  text-transform: uppercase;
 
 }
 
-.nav-pills > li > .btn
+.nav-pills > li > .btn,
+.nav-tabs > li > .btn
 {
 
   padding: 1rem 0;
@@ -266,26 +300,44 @@ body
 
 }
 
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover
+.nav-tabs > li 
 {
 
-  background-color: #0C142D;
-  color: #ffffff;
+  width: 30%;
 
 }
 
+.nav-tabs > li > .btn
+{
 
-.btn-primary
+  padding: 1rem;
+  margin: 0 0.5rem;
+
+}
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus
+{
+
+
+}
+
+.btn-primary,
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus
 {
 
   color: #ffffff;
   background: #0D2856;
-  border-color: #0D2856;
+  border: 1px solid #0D2856;
+  line-height: 2rem;
 
 }
 
+.btn-primary:active,
+.btn-primary:focus,
 .btn-primary:hover
 {
 
@@ -380,6 +432,13 @@ body
 
 }
 
+.btn-narrow
+{
+
+	width: 10rem;
+
+}
+
 h4
 {
 
@@ -400,11 +459,18 @@ form.placeholder fieldset
 
 }
 
+form label
+{
+
+  color: #0C142D;
+  font-size: 1.6rem;
+}
+
 form input[type="text"],
 form select.form-control
 {
 
-	width: 90%;
+	width: 100%;
 	border-radius: 0.8rem;
 	border: 1px solid #0D2856;
 	line-height: 0.5rem;
@@ -427,20 +493,47 @@ form fieldset ul li
 
 }
 
-form fieldset ul li .btn-secondary
-{
-
-	width: 10rem;
-
-}
-
-.field-direction
+.field-instruction
 {
 
 	color: #A5A09C;
 	font-size: 1.4rem;
 
 }
+
+form 
+{
+
+  clear: both;
+
+}
+
+.data-dictionary-editor
+{
+
+  width: 100%;
+
+}
+
+.data-dictionary-editor th
+{
+
+  text-align: center;
+  color: #0D2856;
+  font-size: 1.6rem;
+
+}
+
+.data-dictionary-editor th,
+.data-dictionary-editor td
+{
+
+  width: 23%;
+  padding: 1%;
+
+}
+
+
 
 /* Chrome, Firefox, Opera, Safari 10.1+ */
 ::placeholder 
@@ -474,7 +567,7 @@ form fieldset ul li .btn-secondary
 div.wrapper
 {
 
-  width: 840px;
+  width: 870px;
   margin: 2% auto;
 
 }
