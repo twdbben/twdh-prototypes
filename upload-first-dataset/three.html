@@ -14,106 +14,148 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <div class="wrapper container">
+    <div class="header">
       <h1><a href="../index.html">TWDH Prototypes</a></h1>
       <h2><a href="./index.html">Upload-First Dataset Workflow</a></h2>
-      <ul class="nav nav-pills nav-header">
-        <li class="complete">
-          <a href="./one.html">
-            <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
-            Add<br/>Resource
-          </a>
-        </li>
-        <li class="complete">
-          <a href="./two.html">
-            <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
-            Data</br>Dictionary
-          </a>
-        </li>
-        <li class="in-progress">
-          <div class="tab-number"><span>3</span></div>
-          Spatial</br>Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>4</span></div>
-          Description</br>Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>5</span></div>
-          Quality & Usage Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>6</span></div>
-          Additional</br>Information
-        </li>
-      </ul>
-      <h4>Spatial Information</h4>
-      <form action="./four.html">
-        <fieldset>
-          <label>Spatial Coordinate Field Type</label>
-          <ul class="nav nav-tabs" id="spatial-tabs" role="tablist">
-            <li role="presentation"><a href="#separate" class="btn btn-secondary">Separate Lat/Long Fields</a></li>
-            <li role="presentation"><a href="#single" class="btn btn-secondary">Single Coordinate Field</a></li>
-            <li role="presentation"><a href="#none" class="btn btn-secondary">No Spatial Field</a></li>
+    </div>
+    <div class="wrapper">
+      <div class="row">
+        <div class="col col-md-3 sidebar">
+          <h3>Resource Title</h3>
+          <h3><i class="fa fa-circle" aria-hidden="true"></i> Why spatial coverage?</h3>
+          <p>The spatial coverage area will be used to catalog resources by location and enable geographic search for users.</p>
+          <p>The area does not need to be overly detailed but should reflect the general location where data from this resource are located. </p>
+          <p>Separate lat/long fields: Description</p>
+          <p>Single coordinate field: Description</p>
+          <p>No spatial field: Description</p>
+        </div>
+        <div class="col col-md-9">
+          <ul class="nav nav-pills nav-header">
+            <li class="complete">
+              <a href="./one.html">
+                <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
+                Add<br/>Resource
+              </a>
+            </li>
+            <li class="complete">
+              <a href="./two.html">
+                <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
+                Data</br>Dictionary
+              </a>
+            </li>
+            <li class="in-progress">
+              <div class="tab-number"><span>3</span></div>
+              Spatial</br>Information
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>4</span></div>
+              Description</br>Information
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>5</span></div>
+              Quality & Usage Information
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>6</span></div>
+              Additional</br>Information
+            </li>
           </ul>
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="blank"></div>
-            <div role="tabpanel" class="tab-pane" id="separate">
-              <div class="form-group">
-                <div class="col-md-6">
-                  <label for="field-latitude-field">Latitude Field</label>
-                  <select name="field-latitude-field" class="form-control">
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                    <option value="">NO LONGITUDE FIELD</option>
-                  </select>
-                  <div class="field-instruction">
-                    Select data field with latitude coordinates
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <label for="field-longitude-field">Longitude Field</label>
-                  <select name="field-longitude-field" class="form-control">
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                    <option value="">NO LONGITUDE FIELD</option>
-                  </select>
-                  <div class="field-instruction">
-                    Select data field with longitude coordinates
+          <h4>Spatial Information</h4>
+          <form action="./four.html">
+            <fieldset>
+              <div class="row">
+                <div class="col col-md-12">
+                  <label>Spatial Coordinate Field Type</label>
+                  <ul class="nav nav-tabs" id="spatial-tabs" role="tablist">
+                    <li role="presentation"><a href="#separate" class="btn btn-secondary">Separate Lat/Long Fields</a></li>
+                    <li role="presentation"><a href="#single" class="btn btn-secondary">Single Coordinate Field</a></li>
+                    <li role="presentation"><a href="#none" class="btn btn-secondary">No Spatial Field</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="blank"></div>
+                    <div role="tabpanel" class="tab-pane" id="separate">
+                      <div class="row">
+                        <div class="col col-md-6">
+                          <label for="field-latitude-field">Latitude Field</label>
+                          <select name="field-latitude-field" class="form-control">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="">NO LATITUDE FIELD</option>
+                          </select>
+                          <div class="field-instruction">
+                            Select data field with latitude coordinates
+                          </div>
+                        </div>
+                        <div class="col col-md-6">
+                          <label for="field-longitude-field">Longitude Field</label>
+                          <select name="field-longitude-field" class="form-control">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="">NO LONGITUDE FIELD</option>
+                          </select>
+                          <div class="field-instruction">
+                            Select data field with longitude coordinates
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="single">
+                      <div class="row">
+                        <div class="col col-md-6">
+                          <label for="field-latitude-field">Coordinate Field</label>
+                          <select name="field-latitude-field" class="form-control">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="">NO COORDINATE FIELD</option>
+                          </select>
+                          <div class="field-instruction">
+                            Select data field with coordinates
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="none">
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="form-group">
-                <div class="col-md-12">
+              <div class="row">
+                <div class="col col-md-12">
                   <label for="field-spatial-coverage">Spatial Coverage</label>
                   <p><strong>Option 1:</strong> Draw a polygon on the map below to reflect the general location where data from this resource are located.</p>
+                  <div class="map-widget">
+                    <h1><a href="https://tnris.github.io/twdh_gazetteer/" target="_blank">TWDH Gazetteer Widget</a></h1>
+                  </div>
                   <p><strong>Option 2:</strong> Select common placenames and/or describe the general location where data from this resource are located.</p>
-                  <input type="text" place
+                  <input type="text" placeholder="Add a written description of the coverage area..."/>
                 </div>
               </div>
-           </div>
-            <div role="tabpanel" class="tab-pane" id="single">
-            </div>
-            <div role="tabpanel" class="tab-pane" id="none">
-            </div>
-          </div>
-        </fieldset>
-        <ul class="nav nav-pills nav-footer">
-          <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
-        </ul>
-        <ul class="nav nav-pills nav-footer">
-          <li><a href="./two.html" class="btn btn-secondary">Previous</a></li>
-          <li><button type="submit" class="btn btn-primary">Next</button></li>
-          <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
-        </ul>
-      </form>
-      <div class="description">
+            </fieldset>
+            <ul class="nav nav-pills nav-footer">
+              <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
+            </ul>
+            <ul class="nav nav-pills nav-footer">
+              <li><a href="./two.html" class="btn btn-secondary">Previous</a></li>
+              <li><button type="submit" class="btn btn-primary">Next</button></li>
+              <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <div class="overview">
         <h3>Step 3: Spatial Information</h3>
         <ul>
+          <li>Questions
+            <ul>
+              <li></li>
+            </ul>
+          </li>
           <li>Validation Criteria
             <ul>
               <li></li>

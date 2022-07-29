@@ -14,58 +14,158 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="header">
       <h1><a href="../index.html">TWDH Prototypes</a></h1>
       <h2><a href="./index.html">Upload-First Dataset Workflow</a></h2>
-      <ul class="nav nav-pills nav-header">
-        <li class="complete">
-          <a href="./one.html">
-            <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
-            Add<br/>Resource
-          </a>
-        </li>
-        <li class="complete">
-          <a href="./two.html">
-            <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
-            Data</br>Dictionary
-          </a>
-        </li>
-        <li class="complete">
-          <a href="./three.html">
-            <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
-            Spatial</br>Information
-          </a>
-        </li>
-        <li class="in-progress">
-          <div class="tab-number"><span>4</span></div>
-          Description</br>Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>5</span></div>
-          Quality & Usage Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>6</span></div>
-          Additional</br>Information
-        </li>
-      </ul>
-      <h4>Description Information</h4>
-      <form class="placeholder" action="./five.html">
-        <fieldset>
-        &lt;form/&gt;
-        </fieldset>
-        <ul class="nav nav-pills nav-footer">
-          <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
-        </ul>
-        <ul class="nav nav-pills nav-footer">
-          <li><a href="./three.html" class="btn btn-secondary">Previous</a></li>
-          <li><button type="submit" class="btn btn-primary">Next</button></li>
-          <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
-        </ul>
-      </form>
-      <div class="description">
+    </div>
+    <div class="wrapper">
+      <div class="row">
+        <div class="col col-md-3 sidebar">
+          <h3>Resource Title</h3>
+          <h3><i class="fa fa-circle" aria-hidden="true"></i> Be clear and concise</h3>
+          <p>You are the expert of your own data. Help others find and understand your data by using clear, concise and simple language.</p>
+          <ul>
+            <li>Limit use of technical language and acronyms.</li>
+            <li>Keep things short and to the point.</li>
+            <li>Use bullet point lists in place of long run on sentences.</li>
+          </ul>
+          <h3><i class="fa fa-circle" aria-hidden="true"></i> Why primary and secondary tags?</h3>
+          <p>Better search results! By splitting tags into primary and secondary options we can give different weight to the tags. </p>
+          <p>Which means if someone searchs for a particular tag the more relevant resources will show up first.</p>
+          <p>Primary tags should reflect the main point, purpose, or use of the data. </p>
+          <p>But we know there can be other useful information included in resources that may not be the primary focus. This is where secondary tags should be used.</p>
+          <p>For example a resource may primarily have data related to surface water availability, but also have some additional information about existing conditions and water quality. It may be entered as shown below:</p>
+          <ul> 
+            <li>Category: Surface Water; Planning</li>
+            <li>Primary Tags: Availability; Quantity</li>
+            <li>Secondary Tags: Quality; Location Description</li>
+          </ul>
+        </div>
+        <div class="col col-md-9">
+          <ul class="nav nav-pills nav-header">
+            <li class="complete">
+              <a href="./one.html">
+                <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
+                Add<br/>Resource
+              </a>
+            </li>
+            <li class="complete">
+              <a href="./two.html">
+                <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
+                Data</br>Dictionary
+              </a>
+            </li>
+            <li class="complete">
+              <a href="./three.html">
+                <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
+                Spatial</br>Information
+              </a>
+            </li>
+            <li class="in-progress">
+              <div class="tab-number"><span>4</span></div>
+              Description</br>Information
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>5</span></div>
+              Quality & Usage Information
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>6</span></div>
+              Additional</br>Information
+            </li>
+          </ul>
+          <h4>Description Information</h4>
+          <form action="./five.html">
+            <fieldset>
+              <div class="row">
+                <div class="col col-md-12">
+                  <label>Abstract</label>
+                  <textarea class="form-control" name="field-abstract"></textarea>
+                    <div class="field-instruction">
+                      1-2 short sentences for users to get a quick understanding of the resource
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-12">
+                  <label>Caveats and Usage <span class="not-bold">(optional)</span></label>
+                  <textarea class="form-control" name="field-caveats"></textarea>
+                    <div class="field-instruction">
+                      Describe any caveats users should know about and/or how this resource may be used.
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-6">
+                  <label for="field-category">Category</label>
+                  <div class="field-instruction">
+                    Select all that apply
+                  </div>
+                  <select multiple name="field-category" class="form-control">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                  </select>
+                  <div class="field-instruction">
+                    Broad categories this resource falls within
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-6">
+                  <label for="field-primary-tags">Primary Tags</label>
+                  <div class="field-instruction">
+                    Select all that apply
+                  </div>
+                  <select multiple name="field-primary-tags" class="form-control">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                  </select>
+                  <div class="field-instruction">
+                    Keywords related to the primary focus
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-6">
+                  <label for="field-secondary-tags">Secondary Tags</label>
+                  <div class="field-instruction">
+                    Select all that apply
+                  </div>
+                  <select multiple name="field-secondary-tags" class="form-control">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                  </select>
+                  <div class="field-instruction">
+                    Other associated keywords
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <ul class="nav nav-pills nav-footer">
+              <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
+            </ul>
+            <ul class="nav nav-pills nav-footer">
+              <li><a href="./three.html" class="btn btn-secondary">Previous</a></li>
+              <li><button type="submit" class="btn btn-primary">Next</button></li>
+              <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <div class="overview">
         <h3>Step 4: Description Information</h3>
         <ul>
+          <li>Questions
+            <ul>
+              <li></li>
+            </ul>
+          </li>
           <li>Validation Criteria
             <ul>
               <li></li>

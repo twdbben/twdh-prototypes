@@ -14,143 +14,166 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="header">
       <h1><a href="../index.html">TWDH Prototypes</a></h1>
       <h2><a href="./index.html">Upload-First Dataset Workflow</a></h2>
-      <ul class="nav nav-pills nav-header">
-        <li class="complete">
-          <a href="./one.html">
-            <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
-            Add<br/>Resource
-          </a>
-        </li>
-        <li class="in-progress">
-          <div class="tab-number"><span>2</span></div>
-          Data</br>Dictionary
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>3</span></div>
-          Spatial</br>Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>4</span></div>
-          Description</br>Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>5</span></div>
-          Quality & Usage Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>6</span></div>
-          Additional</br>Information
-        </li>
-      </ul>
-      <h4 class="float-left">Data Dictionary</h4> <span class="warning title-warning"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Auto generated. Please review.</span>
-      <form action="./three.html">
-        <fieldset>
-          <table class="data-dictionary-editor">
-            <tr>
-              <th>Field Name</th>
-              <th>Title</th>
-              <th>Format</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td><input name="field-dd-field-name-1" type="text" value="A"/></td>
-              <td><input name="field-dd-field-title-1" type="text"/></td>
-              <td>
-                <select name="field-dd-field-format-1" class="form-control">
-                  <option value=""></option>
-                  <option value="date">Date</option>
-                  <option value="numeric">Numeric</option>
-                  <option value="text">Text</option>
-                  <option value="timestamp">Timestamp</option>
-                </select>
-              </td>
-              <td><input name="field-dd-field-description-1" type="text"/></td>
-            </tr>
-            <tr>
-              <td><input name="field-dd-field-name-2" type="text" value="B"/></td>
-              <td><input name="field-dd-field-title-2" type="text"/></td>
-              <td>
-                <select name="field-dd-field-format-2" class="form-control">
-                  <option value=""></option>
-                  <option value="date">Date</option>
-                  <option value="numeric">Numeric</option>
-                  <option value="text">Text</option>
-                  <option value="timestamp">Timestamp</option>
-                </select>
-              </td>
-              <td><input name="field-dd-field-description-2" type="text"/></td>
-            </tr>
-            <tr>
-              <td><input name="field-dd-field-name-3" type="text" value="C"/></td>
-              <td><input name="field-dd-field-title-3" type="text"/></td>
-              <td>
-                <select name="field-dd-field-format-3" class="form-control">
-                  <option value=""></option>
-                  <option value="date">Date</option>
-                  <option value="numeric">Numeric</option>
-                  <option value="text">Text</option>
-                  <option value="timestamp">Timestamp</option>
-                </select>
-              </td>
-              <td><input name="field-dd-field-description-3" type="text"/></td>
-            </tr>
-            <tr>
-              <td><input name="field-dd-field-name-4" type="text" value="D"/></td>
-              <td><input name="field-dd-field-title-4" type="text"/></td>
-              <td>
-                <select name="field-dd-field-format-4" class="form-control">
-                  <option value=""></option>
-                  <option value="date">Date</option>
-                  <option value="numeric">Numeric</option>
-                  <option value="text">Text</option>
-                  <option value="timestamp">Timestamp</option>
-                </select>
-              </td>
-              <td><input name="field-dd-field-description-4" type="text"/></td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <label for="field-date-field">Date Field</label>
-                <select name="field-date-field" class="form-control">
-                  <option value="A">A</option>
-                  <option value="B">B</option>
-                  <option value="C">C</option>
-                  <option value="D">D</option>
-                  <option value="">NO DATE FIELD</option>
-                </select>
-                <div class="field-instruction">
-                  Select date field to reflect the timeframe covered
-                </div>
-              </td>
-            </tr>
-             <tr>
-              <td colspan="2">
-                <label class="float-left" for="field-date-field">Date Range</label><span class="warning label-warning"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Auto generated. Please review.</span>
-                <select name="field-date-range" class="form-control">
-                  <option value="A">6/19/2020 - 8/1/2022</option>
-                </select>
-                <div class="field-instruction">
-                  Select date field to reflect the timeframe covered
-                </div>
-              </td>
-            </tr>
-          </table>
-        </fieldset>
-        <ul class="nav nav-pills nav-footer">
-          <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
-        </ul>
-        <ul class="nav nav-pills nav-footer">
-          <li><a href="./one.html" class="btn btn-secondary">Previous</a></li>
-          <li><button type="submit" class="btn btn-primary">Next</button></li>
-          <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
-        </ul>
-      </form>
-      <div class="description">
+    </div>
+    <div class="wrapper">
+      <div class="row">
+        <div class="col col-md-3 sidebar">
+          <h3>Resource Title</h3>
+          <h3><i class="fa fa-circle" aria-hidden="true"></i> What is a data dictionary?</h3>
+          <p>A data dictionary is used to catalog and communicate the structure and content of data, and provides meaningful descriptions for individually named data objects (USGS, 2021).
+          <p><strong>Field Name:</strong> description</p>
+          <p><strong>Title:</strong> description</p>
+          <p><strong>Format:</strong> description</p>
+          <p><strong>Description:</strong> description</p>
+          <br/>
+          <p>Reference:<br/>
+          <p><a href="https://doi.org/10.5066/F7MW2G15" target="_blank">U.S. Geological Survey, 2021, USGS Data Management Website: U.S. Geological Survey</a></p>
+        </div>
+        <div class="col col-md-9">
+          <ul class="nav nav-pills nav-header">
+            <li class="complete">
+              <a href="./one.html">
+                <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
+                Add<br/>Resource
+              </a>
+            </li>
+            <li class="in-progress">
+              <div class="tab-number"><span>2</span></div>
+              Data</br>Dictionary
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>3</span></div>
+              Spatial</br>Information
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>4</span></div>
+              Description</br>Information
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>5</span></div>
+              Quality & Usage Information
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>6</span></div>
+              Additional</br>Information
+            </li>
+          </ul>
+          <h4 class="float-left">Data Dictionary</h4> <span class="warning title-warning"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Auto generated. Please review.</span>
+          <form action="./three.html">
+            <fieldset>
+              <table class="data-dictionary-editor">
+                <tr>
+                  <th>Field Name</th>
+                  <th>Title</th>
+                  <th>Format</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td><input name="field-dd-field-name-1" type="text" value="A"/></td>
+                  <td><input name="field-dd-field-title-1" type="text"/></td>
+                  <td>
+                    <select name="field-dd-field-format-1" class="form-control">
+                      <option value=""></option>
+                      <option value="date">Date</option>
+                      <option value="numeric">Numeric</option>
+                      <option value="text">Text</option>
+                      <option value="timestamp">Timestamp</option>
+                    </select>
+                  </td>
+                  <td><input name="field-dd-field-description-1" type="text"/></td>
+                </tr>
+                <tr>
+                  <td><input name="field-dd-field-name-2" type="text" value="B"/></td>
+                  <td><input name="field-dd-field-title-2" type="text"/></td>
+                  <td>
+                    <select name="field-dd-field-format-2" class="form-control">
+                      <option value=""></option>
+                      <option value="date">Date</option>
+                      <option value="numeric">Numeric</option>
+                      <option value="text">Text</option>
+                      <option value="timestamp">Timestamp</option>
+                    </select>
+                  </td>
+                  <td><input name="field-dd-field-description-2" type="text"/></td>
+                </tr>
+                <tr>
+                  <td><input name="field-dd-field-name-3" type="text" value="C"/></td>
+                  <td><input name="field-dd-field-title-3" type="text"/></td>
+                  <td>
+                    <select name="field-dd-field-format-3" class="form-control">
+                      <option value=""></option>
+                      <option value="date">Date</option>
+                      <option value="numeric">Numeric</option>
+                      <option value="text">Text</option>
+                      <option value="timestamp">Timestamp</option>
+                    </select>
+                  </td>
+                  <td><input name="field-dd-field-description-3" type="text"/></td>
+                </tr>
+                <tr>
+                  <td><input name="field-dd-field-name-4" type="text" value="D"/></td>
+                  <td><input name="field-dd-field-title-4" type="text"/></td>
+                  <td>
+                    <select name="field-dd-field-format-4" class="form-control">
+                      <option value=""></option>
+                      <option value="date">Date</option>
+                      <option value="numeric">Numeric</option>
+                      <option value="text">Text</option>
+                      <option value="timestamp">Timestamp</option>
+                    </select>
+                  </td>
+                  <td><input name="field-dd-field-description-4" type="text"/></td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <label for="field-date-field">Date Field</label>
+                    <select name="field-date-field" class="form-control">
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="C">C</option>
+                      <option value="D">D</option>
+                      <option value="">NO DATE FIELD</option>
+                    </select>
+                    <div class="field-instruction">
+                      Select date field to reflect the timeframe covered
+                    </div>
+                  </td>
+                </tr>
+                 <tr>
+                    <td colspan="2">
+                      <label class="float-left" for="field-date-field">Date Range</label><span class="warning label-warning"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Auto generated. Please review.</span>
+                      <select name="field-date-range" class="form-control">
+                      <option value="A">6/19/2020 - 8/1/2022</option>
+                    </select>
+                    <div class="field-instruction">
+                      Select date field to reflect the timeframe covered
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+            <ul class="nav nav-pills nav-footer">
+              <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
+            </ul>
+            <ul class="nav nav-pills nav-footer">
+              <li><a href="./one.html" class="btn btn-secondary">Previous</a></li>
+              <li><button type="submit" class="btn btn-primary">Next</button></li>
+              <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <div class="overview">
         <h3>Step 2: Data Dictionary</h3>
         <ul>
+          <li>Questions
+            <ul>
+              <li></li>
+            </ul>
+          </li>
           <li>Validation Criteria
             <ul>
               <li></li>

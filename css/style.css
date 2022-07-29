@@ -18,7 +18,31 @@ body
   line-height: 1.35em;
   min-width: 320px;
   color: #59555B;
-	margin: 5%;
+
+}
+
+.header
+{
+
+	padding: 1%;
+  background: #0B7D8E;
+
+}
+
+.header h1
+{
+
+}
+
+.header h2
+{
+
+}
+
+.header a
+{
+
+  color: #fff;
 
 }
 
@@ -467,7 +491,8 @@ form label
 }
 
 form input[type="text"],
-form select.form-control
+form select.form-control,
+form textarea.form-control
 {
 
 	width: 100%;
@@ -476,6 +501,14 @@ form select.form-control
 	line-height: 0.5rem;
 	padding: 6px 12px;
 	font-size: 1.4rem;
+
+}
+
+form textarea.form-control
+{
+
+  height: 10vh;
+  min-height: 10rem;
 
 }
 
@@ -539,7 +572,7 @@ form
 ::placeholder 
 {
 
-  color: #59555B;
+  color: #A5A09C;
   opacity: 1; /* Firefox */
 
 }
@@ -548,7 +581,7 @@ form
 ::-ms-input-placeholder
 {
   
-  color: #59555B;
+  color: #A5A09C;
 
 }
 
@@ -556,7 +589,7 @@ form
 ::-ms-input-placeholder 
 {
 
-  color: #59555B;
+  color: #A5A09C;
 
 }
 
@@ -567,23 +600,23 @@ form
 div.wrapper
 {
 
-  width: 870px;
-  margin: 2% auto;
+  width: 1130px;
+  margin: 0;
 
 }
 
-.description 
+.overview 
 {
 
   border: .3rem dotted  #0B7D8E;
   border-radius: 0.8rem;
-	margin: 2rem auto;
+	margin: 2rem 0rem 2rem 2rem;
 	padding: 1rem;
-	max-width: 84rem;
+	max-width: 113rem;
 
 }
 
-.description li
+.overview li
 {
 
 	padding-bottom: 0.5rem;
@@ -591,10 +624,70 @@ div.wrapper
 }
 
 
-.description h3
+.overview h3
 {
 
 	margin: .5rem;
 	padding; 0;
 
 }
+
+.row
+{
+
+  margin-bottom: 2rem;
+
+}
+
+.map-widget
+{
+
+  width: 100%;
+  border: 1px solid #59555B; 
+  height: 30vh;
+  text-align: center;
+  background: #e9e9e9;
+  margin-bottom: 1rem;
+
+}
+
+.not-bold
+{
+
+  font-weight: 500;
+
+}
+
+.sidebar p
+{
+
+  padding-left: 0.5rem;
+
+}
+
+.sidebar
+{
+
+  font-size: 1.4rem;
+  color: 
+}
+
+.sidebar h3
+{
+
+  background: #F9F9FB;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0D2856;
+
+}
+
+.editable
+{
+
+  background: #0B7D8E;
+  color: #fff;
+
+}
+

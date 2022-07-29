@@ -14,60 +14,126 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="header">
       <h1><a href="../index.html">TWDH Prototypes</a></h1>
       <h2><a href="./index.html">Upload-First Dataset Workflow</a></h2>
-      <ul class="nav nav-pills nav-header">
-        <li class="complete">
-          <a href="./one.html">
-            <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
-            Add<br/>Resource
-          </a>
-        </li>
-        <li class="complete">
-          <a href="./two.html">
-            <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
-            Data</br>Dictionary
-          </a>
-        </li>
-        <li class="complete">
-          <a href="./three.html">
-            <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
-            Spatial</br>Information
-          </a>
-        </li>
-        <li class="complete">
-          <a href="./four.html">
-            <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
-            Description</br>Information
-          </a>
-        </li>
-        <li class="in-progress">
-          <div class="tab-number"><span>5</span></div>
-          Quality & Usage Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>6</span></div>
-          Additional</br>Information
-        </li>
-      </ul>
-      <h4>Quality & Usage Information</h4>
-      <form class="placeholder" action="./six.html">
-        <fieldset>
-          &lt;form/&gt;
-        </fieldset>
-        <ul class="nav nav-pills nav-footer">
-          <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
-        </ul>
-        <ul class="nav nav-pills nav-footer">
-          <li><a href="./four.html" class="btn btn-secondary">Previous</a></li>
-          <li><button type="submit" class="btn btn-primary">Next</button></li>
-          <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
-        </ul>
-      </form>
-      <div class="description">
+    </div>
+    <div class="wrapper">
+      <div class="row">
+        <div class="col col-md-3 sidebar">
+          <h3>Resource Title</h3>
+          <p><i><strong>Abstract</strong> field from step 4</i></p>
+        </div>
+        <div class="col col-md-9">
+          <ul class="nav nav-pills nav-header">
+            <li class="complete">
+              <a href="./one.html">
+                <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
+                Add<br/>Resource
+              </a>
+            </li>
+            <li class="complete">
+              <a href="./two.html">
+                <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
+                Data</br>Dictionary
+              </a>
+            </li>
+            <li class="complete">
+              <a href="./three.html">
+                <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
+                Spatial</br>Information
+              </a>
+            </li>
+            <li class="complete">
+              <a href="./four.html">
+                <div class="tab-number"><span><i class="fa fa-check" aria-hidden="true"></i></span></div>
+                Description</br>Information
+              </a>
+            </li>
+            <li class="in-progress">
+              <div class="tab-number"><span>5</span></div>
+              Quality & Usage Information
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>6</span></div>
+              Additional</br>Information
+            </li>
+          </ul>
+          <h4>Quality & Usage Information</h4>
+          <form action="./six.html">
+            <fieldset>
+              <div class="row">
+                <div class="col col-md-12">
+                  <label>Collection Method <span class="not-bold">(optional)</span></label>
+                  <textarea class="form-control" name="field-collection-method"></textarea>
+                  <div class="field-instruction">
+                    Information on how these data are collected and maintained
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-6">
+                  <label for="field-quality-control-level">Quality Control Level</label>
+                  <select name="field-quality-control-level" class="form-control">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                  </select>
+                  <div class="field-instruction">
+                    Level of review and correction
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-12">
+                  <label>Quality Assurance Notes <span class="not-bold">(optional)</span></label>
+                  <textarea class="form-control" name="field-quality-assurance-notes"></textarea>
+                  <div class="field-instruction">
+                    Describe how these data are reviewed and corrected for quality assurance.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-6">
+                  <label for="field-update-type">Update Type</label>
+                  <p><input type="radio" value="automatic"> Automatic<br/><p><input type="radio" value="manual"> Manual</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-6">
+                  <label for="field-update-frequency">Update Frequency</label>
+                  <select name="field-update-frequency" class="form-control">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                  </select>
+                  <div class="field-instruction">
+                    How often updates occur
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <ul class="nav nav-pills nav-footer">
+              <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
+            </ul>
+            <ul class="nav nav-pills nav-footer">
+              <li><a href="./four.html" class="btn btn-secondary">Previous</a></li>
+              <li><button type="submit" class="btn btn-primary">Next</button></li>
+              <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <div class="overview">
         <h3>Step 5: Quality & Usage Information</h3>
         <ul>
+          <li>Questions
+            <ul>
+              <li></li>
+            </ul>
+          </li>
           <li>Validation Criteria
             <ul>
               <li></li>

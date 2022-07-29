@@ -14,90 +14,112 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="header">
       <h1><a href="../index.html">TWDH Prototypes</a></h1>
       <h2><a href="./index.html">Upload-First Dataset Workflow</a></h2>
-      <ul class="nav nav-pills nav-header">
-        <li class="in-progress">
-          <div class="tab-number"><span>1</span></div>
-          Add<br/>Resource
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>2</span></div>
-          Data</br>Dictionary
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>3</span></div>
-          Spatial</br>Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>4</span></div>
-          Description</br>Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>5</span></div>
-            Quality & Usage Information
-        </li>
-        <li class="incomplete">
-          <div class="tab-number"><span>6</span></div>
-          Additional</br>Information
-        </li>
-      </ul>
-      <h4>Add Resource</h4>
-      <form action="./two.html">
-        <fieldset>
+    </div>
+    <div class="wrapper">
+      <div class="row">
+        <div class="col col-md-3 sidebar">
+          <h3><i class="fa fa-circle" aria-hidden="true"></i> What are resources?</h3>
+          <p>The Texas Water Data Hub defines resources as:</p>
           <ul>
-            <li>
-              <label class="control-label" for="field-title">Title</label>
-              <div class="controls">
-                <input name="field-title" type="text" class="form-control" placeholder="" />
-                <div class="field-instruction">
-                  A clear and descriptive title to represent the data
-                </div>
-              </div>
+            <li>datasets (such as an API or files)</li>
+            <li>applications (such as viewers or interactive maps)</li>
+            <li>materials that may supplement or add context to water data (such as images, non-water boundaries, or documents)</li>
+          </ul>
+          <p>Resources are combined with a description and other information at a fixed URL and are what users see when searching in the hub.</p>
+          <h3><i class="fa fa-circle" aria-hidden="true"></i> What are collaborators and roles?</h3>
+          <p>Collaborators may be assigned at the resource level to give permissions to other users to help manage a resource. </p>
+          <p>For example, an organization’s admin may prefer to add users more familiar with a resource as collaborators to enter metadata and help maintain a resource. </p>
+          <p><strong>Editor:</strong> Editors can edit the resource and its metadata, as well as accessing the resource if private.</p>
+          <p><strong>Viewer:</strong> Viewers can access the dataset if private, but not edit it.</p>
+        </div>
+        <div class="col col-md-9">
+          <ul class="nav nav-pills nav-header">
+            <li class="in-progress">
+              <div class="tab-number"><span>1</span></div>
+              Add<br/>Resource
             </li>
-            <li>
-              <button class="btn btn-tertiary active" onclick="return false;"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add Collaborators</button>
+            <li class="incomplete">
+              <div class="tab-number"><span>2</span></div>
+              Data</br>Dictionary
             </li>
-            <li>
-              <label class="control-label" for="field-resource-type">Resource Type</label>
-              <div class="controls">
-                <select name="field-resource-type" type="text" class="form-control">
-                  <option value=""></option>
-                  <option value="api">API</option>
-                  <option value="interactive-map">Interactive Map</option>
-                  <option value="sensor">Sensor</option>
-                </select>
-                <div class="field-instruction">
-                  Type of resource being added
-                </div>
-              </div>
+            <li class="incomplete">
+              <div class="tab-number"><span>3</span></div>
+              Spatial</br>Information
             </li>
-            <li>
-              <label class="control-label" for="field-resource-type">Add Resource</label>
-              <div class="controls">
-                <button class="btn btn-secondary btn-narrow" onclick="return false;"><i class="fa fa-link" aria-hidden="true"></i> Link</button>
-                <button class="btn btn-secondary btn-narrow" onclick="return false;"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
-              </div>
+            <li class="incomplete">
+              <div class="tab-number"><span>4</span></div>
+              Description</br>Information
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>5</span></div>
+                Quality & Usage Information
+            </li>
+            <li class="incomplete">
+              <div class="tab-number"><span>6</span></div>
+              Additional</br>Information
             </li>
           </ul>
-        </fieldset>
-        <ul class="nav nav-pills nav-footer">
-          <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
-        </ul>
-        <ul class="nav nav-pills nav-footer">
-          <li><button type="submit" class="btn btn-primary">Next</button></li>
-          <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
-        </ul>
-      </form>
-      <div class="description">
+          <h4>Add Resource</h4>
+          <form action="./two.html">
+            <fieldset>
+              <ul>
+                <li>
+                  <label class="control-label" for="field-title">Title</label>
+                  <div class="controls">
+                    <input name="field-title" type="text" class="form-control" placeholder="" />
+                    <div class="url-slug">
+                      * URL: txwaterdatahub.org/dataset/<span class="editable">&lt;dataset-id&gt;</span> <input type="button" value="Edit"/>
+                    </div>
+                    <div class="field-instruction">
+                      A clear and descriptive title to represent the data
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <button class="btn btn-tertiary active" onclick="return false;"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add Collaborators</button>
+                </li>
+                <li>
+                  <label class="control-label" for="field-resource-type">Resource Type</label>
+                  <div class="controls">
+                    <select name="field-resource-type" type="text" class="form-control">
+                      <option value=""></option>
+                      <option value="api">API</option>
+                      <option value="interactive-map">Interactive Map</option>
+                      <option value="sensor">Sensor</option>
+                    </select>
+                    <div class="field-instruction">
+                      Type of resource being added
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <label class="control-label" for="field-resource-type">Add Resource</label>
+                  <div class="controls">
+                    <button class="btn btn-secondary btn-narrow" onclick="return false;"><i class="fa fa-link" aria-hidden="true"></i> Link</button>
+                    <button class="btn btn-secondary btn-narrow" onclick="return false;"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+            <ul class="nav nav-pills nav-footer">
+              <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
+            </ul>
+            <ul class="nav nav-pills nav-footer">
+              <li><button type="submit" class="btn btn-primary">Next</button></li>
+              <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+      <div class="overview">
         <h3>Step 1: Add Resource</h3>
         <ul>
           <li>Questions
             <ul>
-              <li>Do we want a URL indicator / slug edit field below the title like in standard CKAN? Yes</li>
-              <li>Can we add collaborators on this page? What impact does it have to add collaborators before the dataset is published?</li>
-              <li>Need to resolve how to allow for maintenance of multiple datasets while also discouraging the use of multiple datasets</li>
+              <li>Can we add collaborators on this page?</li>
             </ul>
           </li>
           <li>Validation Criteria
