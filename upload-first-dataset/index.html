@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Upload First Workflow Prototype</title>
+    <title>Upload-First Workflow Prototype</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="shortcut icon" href="../images/twdh.ico" />
@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="header">
       <h1><a href="../index.html">TWDH Prototypes</a></h1>
-      <h2>Upload-First Dataset Workflow</h2>
+      <h2><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Upload-First Dataset Workflow</h2>
     </div>
     <div class="wrapper">
-      <div class="description">
+      <div class="overview">
         <h3>Overview</h3>
         <ul>
           <li>Completion of this workflow will result in a published dataset with a single resource</li>
@@ -31,13 +31,17 @@
             </ul>
           </li>
           <li>Authors can navigate freely between completed workflow pages in a draft dataset</li>
+          <li>Dataset visibility should always be set to 'Public'</li>
           <li>When editing (as opposed to creating) a dataset, the check marks that indicate progress in the navigation bar return to being numbers</li>
           <li>When creating a dataset, an activity stream event should be logged upon dataset publication</li>
           <li>When editing a dataset, an activity stream event should be logged for any and all field updates</li>
         </ul>
       </div>
-      <a class="btn btn-primary" href="./one.html">Begin Workflow</a>
-      <div class="description">
+      <div class="launch-wrapper">
+        <a class="btn btn-primary" href="./one.html">Launch Workflow <i class="fa fa-external-link" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="overview">
         <h3>Questions</h3>
         <ul>
           <li>Do we want a 'Cancel' or 'Delete Draft' button to bail out of a partially created dataset?</li>
@@ -46,8 +50,7 @@
           <li>What happens on the data dictionary page when the resource is not a tabular file type?</li>
           <li>Does Next/Publish button become 'Update' when editing an existing dataset, or do you still have to 'Next' through the pages?</li>
           <li>How does Datapusher fit in? Is a push triggered on completion of step 1? At what point are Datapusher errors handled?</li>
-          <li>Responsive version? Vertical expansion-tab interface with nav bar rotated 90 degrees should work ... </li>
-          <li>Visibility: Public/Private field missing from wireframes?
+          <li>Since we are not using the 'Private' visibility mode, how does a data author set a dataset back to 'Draft' mode once it has been published?</li>
         </ul>
       </div>
     </div>

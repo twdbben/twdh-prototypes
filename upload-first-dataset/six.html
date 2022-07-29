@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Upload First Workflow Prototype</title>
+    <title>Upload-First Workflow Prototype</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="shortcut icon" href="../images/twdh.ico" />
@@ -16,7 +16,7 @@
   <body>
     <div class="header">
       <h1><a href="../index.html">TWDH Prototypes</a></h1>
-      <h2><a href="./index.html">Upload-First Dataset Workflow</a></h2>
+      <h2><a href="./index.html"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Upload-First Dataset Workflow</a></h2>
     </div>
     <div class="wrapper">
       <div class="row">
@@ -117,12 +117,39 @@
             </ul>
             <ul class="nav nav-pills nav-footer">
               <li><a href="./five.html" class="btn btn-secondary">Previous</a></li>
-              <li><button type="submit" onclick="return confirm( 'Publish dataset?' );" class="btn btn-primary">Publish</button></li>
+              <li><button onclick="return false;" data-toggle="modal" data-target="#publish-modal" class="btn btn-primary">Publish</button></li>
               <li><a href="./index.html" onclick="return confirm( 'Are you sure?' );">Save and exit</a></li>
             </ul>
           </form>
         </div>
       </div>
+
+      <div id="publish-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Download">
+        <div class="modal-dialog modal-med" role="document">
+          <div class="modal-content">    
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body modal-center">
+              <img src="../images/success-droplet.png" alt="Success!" />
+              <h2>Congratulations!</h2>
+              <p>Your resource is now available in the hub for people to find, and a confirmation email is on the way.</p>
+              <div class="modal-dataset-link">
+                <button type="button" class="btn btn-tertiary" data-dismiss="modal">Go To Page</button>    
+                <button type="button" class="btn btn-secondary">Copy</button>    
+                <div name="field-dataset-link"> https://txwaterdatahub.org/dataset-id</div>
+                <div class="clearfix"></div>
+              </div>
+
+
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>    
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="overview">
         <h3>Step 6: Additional Information</h3>
         <ul>
