@@ -70,7 +70,12 @@
                 <div class="col col-md-12">
                   <label class="control-label" for="field-organization">Organization</label>
                   <div class="controls">
-                    <input name="field-organization" type="text" class="form-control" placeholder="" />
+                    <select name="field-organization" class="form-control">
+                      <option value="">Select the organization</option>
+                      <option value="A">A</option>
+                      <option value="B">B</option>
+                      <option value="C">C</option>
+                    </select>
                     <div class="field-instruction">
                       Responsible or associated organization
                     </div>
@@ -124,7 +129,7 @@
         </div>
       </div>
 
-      <div id="publish-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Download">
+      <div id="publish-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Publish">
         <div class="modal-dialog modal-med" role="document">
           <div class="modal-content">    
             <div class="modal-header">
@@ -153,19 +158,20 @@
       <div class="overview">
         <h3>Step 6: Additional Information</h3>
         <ul>
-          <li>Questions
-            <ul>
-              <li>Should 'Related Datasets' be selected on this page?</li>
-            </ul>
-          </li>
           <li>Validation Criteria
             <ul>
-              <li></li>
+              <li>'Organization' selected</li>
+              <li>'Data Contact Email' set to a valid email address</li>
+              <li>'Supporting URL', if included, set to a valid URL</li>
             </ul>
           </li>
           <li>Activity Stream
             <ul>
-              <li></li>
+              <li>'Organization' changed</li>
+              <li>'Data Contact Email' changed</li>
+              <li>'Supporting URL' changed</li>
+              <li>'Disclaimer Text' changed</li>
+              <li>'Additional Information' changed</li>
             </ul>
           </li>
         </ul>

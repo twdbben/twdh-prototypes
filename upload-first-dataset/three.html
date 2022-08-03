@@ -65,66 +65,96 @@
             <fieldset>
               <div class="row">
                 <div class="col col-md-12">
-                  <label>Spatial Coordinate Field Type</label>
-                  <ul class="nav nav-tabs" id="spatial-tabs" role="tablist">
-                    <li role="presentation"><a href="#separate" class="btn btn-secondary">Separate Lat/Long Fields</a></li>
-                    <li role="presentation"><a href="#single" class="btn btn-secondary">Single Coordinate Field</a></li>
-                    <li role="presentation"><a href="#none" class="btn btn-secondary">No Spatial Field</a></li>
+                  <label><i>NEED Spatial Coordinate System DETAILS</i></label>
+                </div>
+              </div>
+              <!--
+              <div class="row">
+                <div class="col col-md-12">
+                  <label>Spatial Coordinate System</label>
+                  <ul class="nav nav-tabs" id="coordinate-system-tabs" role="tablist">
+                    <li role="presentation"><a href="#wsg84" class="btn btn-secondary">WSG 84</a></li>
+                    <li role="presentation"><a href="#nad83" class="btn btn-secondary">NAD 83</a></li>
+                    <li role="presentation"><a href="#nad27" class="btn btn-secondary">NAD 27</a></li>
                   </ul>
                   <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="blank"></div>
-                    <div role="tabpanel" class="tab-pane" id="separate">
+                    <div role="tabpanel" class="tab-pane" id="wsg84">
+                      -->
                       <div class="row">
-                        <div class="col col-md-6">
-                          <label for="field-latitude-field">Latitude Field</label>
-                          <select name="field-latitude-field" class="form-control">
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                            <option value="D">D</option>
-                            <option value="">NO LATITUDE FIELD</option>
-                          </select>
-                          <div class="field-instruction">
-                            Select data field with latitude coordinates
-                          </div>
-                        </div>
-                        <div class="col col-md-6">
-                          <label for="field-longitude-field">Longitude Field</label>
-                          <select name="field-longitude-field" class="form-control">
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                            <option value="D">D</option>
-                            <option value="">NO LONGITUDE FIELD</option>
-                          </select>
-                          <div class="field-instruction">
-                            Select data field with longitude coordinates
+                        <div class="col col-md-12">
+                          <label>Spatial Coordinate Field Type</label>
+                          <ul class="nav nav-tabs" id="coordinate-field-tabs" role="tablist">
+                            <li role="presentation"><a href="#separate" class="btn btn-secondary">Separate Lat/Long Fields</a></li>
+                            <li role="presentation"><a href="#single" class="btn btn-secondary">Single Coordinate Field</a></li>
+                            <li role="presentation"><a href="#none" class="btn btn-secondary">No Spatial Field</a></li>
+                          </ul>
+                          <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="blank"></div>
+                            <div role="tabpanel" class="tab-pane" id="separate">
+                              <div class="row">
+                                <div class="col col-md-6">
+                                  <label for="field-latitude-field">Latitude Field</label>
+                                  <select name="field-latitude-field" class="form-control">
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="" selected>NO LATITUDE FIELD</option>
+                                  </select>
+                                  <div class="field-instruction">
+                                    Select data field with latitude coordinates
+                                  </div>
+                                </div>
+                                <div class="col col-md-6">
+                                  <label for="field-longitude-field">Longitude Field</label>
+                                  <select name="field-longitude-field" class="form-control">
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="" selected>NO LONGITUDE FIELD</option>
+                                  </select>
+                                  <div class="field-instruction">
+                                    Select data field with longitude coordinates
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="single">
+                              <div class="row">
+                                <div class="col col-md-6">
+                                  <label for="field-latitude-field">Coordinate Field</label>
+                                  <select name="field-latitude-field" class="form-control">
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
+                                    <option value="" selected>NO COORDINATE FIELD</option>
+                                  </select>
+                                  <div class="field-instruction">
+                                    Select data field with coordinates
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="none">
+                            </div>
                           </div>
                         </div>
                       </div>
+                    <!--
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="single">
-                      <div class="row">
-                        <div class="col col-md-6">
-                          <label for="field-latitude-field">Coordinate Field</label>
-                          <select name="field-latitude-field" class="form-control">
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                            <option value="D">D</option>
-                            <option value="">NO COORDINATE FIELD</option>
-                          </select>
-                          <div class="field-instruction">
-                            Select data field with coordinates
-                          </div>
-                        </div>
-                      </div>
+                    <div role="tabpanel" class="tab-pane" id="nad83">
+                      nad83
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="none">
+                    <div role="tabpanel" class="tab-pane" id="nad27">
+                      nad27
                     </div>
                   </div>
                 </div>
               </div>
+                    -->
               <div class="row">
                 <div class="col col-md-12">
                   <label for="field-spatial-coverage">Spatial Coverage</label>
@@ -151,19 +181,30 @@
       <div class="overview">
         <h3>Step 3: Spatial Information</h3>
         <ul>
+          <li>Details
+            <ul>
+              <li>Need 'Spatial Coordinate System' field selection before 'Spatial Coverage Field Type'. 'Spatial Coverage Field Type' options are dependent on selection of 'Spatial Coordinate System'. </li>
+            </ul>
+          </li>
           <li>Questions
             <ul>
-              <li></li>
+              <li>For 'Spatial Coverage', are options 1 and 2 mutually exclusive, or can both be completed?</li>
+              <li>What is the validation criteria for 'Spatial Coverage'?</li>
             </ul>
           </li>
           <li>Validation Criteria
             <ul>
-              <li></li>
+              <li>'Spatial Coordinate System' selected</li>
+              <li>'Spatial Coordinate Field Type' selected</li>
+              <li>'Spatial Coordinate Fields' selected</li>
             </ul>
           </li>
           <li>Activity Stream
             <ul>
-              <li></li>
+              <li>'Spatial Coordinate System' changed</li>
+              <li>'Spatial Coordinate Field Type' changed</li>
+              <li>'Spatial Coordinate Fields' changed</li>
+              <li>'Spatial Coverage' changed</li>
             </ul>
           </li>
         </ul>

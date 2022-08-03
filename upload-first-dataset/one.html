@@ -65,8 +65,8 @@
           <h4>Add Resource</h4>
           <form action="./two.html">
             <fieldset>
-              <ul>
-                <li>
+              <div class="row">
+                <div class="col col-md-12">
                   <label class="control-label" for="field-title">Title</label>
                   <div class="controls">
                     <input name="field-title" type="text" class="form-control" placeholder="" />
@@ -77,11 +77,38 @@
                       A clear and descriptive title to represent the data
                     </div>
                   </div>
-                </li>
-                <li>
-                  <button class="btn btn-tertiary active" onclick="return false;"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add Collaborators</button>
-                </li>
-                <li>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-12">
+                  <button onclick="return false;" data-toggle="modal" data-target="#add-collaborators-modal" class="btn btn-tertiary active"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add Collaborators</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-12">
+                  <label class="control-label" for="field-collaborators">Collaborators</label>
+                  <table class="collaborator-table">
+                    <tbody>
+                      <tr>
+                        <th>User</th>
+                        <th>Role</th>
+                      </tr>
+                      <tr>
+                        <td>Rebecca Storms</td>
+                        <td>Editor
+                          <div class="collaborator-controls">
+                            <button onclick="return false;" class=""><i class="fa fa-wrench" aria-hidden="true"></i></button>
+                            <button onclick="return false;" class="warning"><i class="fa fa-close" aria-hidden="true"></i></button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-12">
                   <label class="control-label" for="field-resource-type">Resource Type</label>
                   <div class="controls">
                     <select name="field-resource-type" type="text" class="form-control">
@@ -94,15 +121,46 @@
                       Type of resource being added
                     </div>
                   </div>
-                </li>
-                <li>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-12">
                   <label class="control-label" for="field-resource-type">Add Resource</label>
-                  <div class="controls">
-                    <button class="btn btn-secondary btn-narrow" onclick="return false;"><i class="fa fa-link" aria-hidden="true"></i> Link</button>
-                    <button class="btn btn-secondary btn-narrow" onclick="return false;"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
+                  <ul class="nav nav-tabs" id="add-resource-tabs" role="tablist">
+                    <li role="presentation"><a href="#link" class="btn btn-secondary btn-narrow"><i class="fa fa-link" aria-hidden="true"></i> Link</a></li>
+                    <li role="presentation"><a href="#upload" class="btn btn-secondary btn-narrow"><i class="fa fa-upload" aria-hidden="true"></i> Upload</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="blank"></div>
+                    <div role="tabpanel" class="tab-pane" id="link">
+                      <div class="row">
+                        <div class="col col-md-12">
+                          <label class="control-label" for="field-url">URL</label>
+                          <div class="controls">
+                            <input name="field-url" type="text" class="form-control" placeholder="" />
+                            <div class="field-instruction">
+                              Direct access or download link for data
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="upload">
+                      <div class="row">
+                        <div class="col col-md-12">
+                          <label class="control-label" for="field-upload">Upload</label>
+                          <div class="controls">
+                            <input name="field-upload" type="file" class="form-control" placeholder="" />
+                            <div class="field-instruction">
+                              Local file to upload to the hub
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             </fieldset>
             <ul class="nav nav-pills nav-footer">
               <li><button class="btn btn-primary btn-disabled" onclick="return false;">Next <i class="fa fa-ban" aria-hidden="true"></i></button></li>
@@ -114,23 +172,51 @@
           </form>
         </div>
       </div>
+
+      <div id="add-collaborators-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Add Collaborators">
+        <div class="modal-dialog modal-med" role="document">
+          <div class="modal-content">    
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body modal-center">
+              <h2>Add Collaborators</h2>
+              <p><i>Native CKAN 'Add Collaborators' form</i></p>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>    
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
       <div class="overview">
         <h3>Step 1: Add Resource</h3>
         <ul>
+          <li>Details
+            <ul>
+              <li>&lt;dataset-id&gt; will update to urlified version of title once the title has been typed in</li>
+              <li>'Add Collaborators' button will launch a modal window containing native CKAN 'Add Collaborators'</li>
+              <li>URL & FILE fields display conditionally dependent on clicking one of the 'Add Resource' buttons</li>
+            </ul>
+          </li>
           <li>Questions
             <ul>
+              <li>Do we allow the 'Upload' capability to non-sysadmins?</li>
               <li>Can we add collaborators on this page?</li>
             </ul>
           </li>
           <li>Validation Criteria
             <ul>
-              <li>'Title' field set to ... Length? Illegal characters? unique?</li>
-              <li>URL slug ... Must be unique. Allowed to change after initial creation?</li>
-              <li>'Resource Type' field set to one (or more?) of the options</li>
-              <li>'Add Resource' upload or link chosen ...
+              <li>'Title' is a valid CKAN dataset title</li>
+              <li>'URL slug' is a valid, unique dataset id</li>
+              <li>'Resource Type' field selection is made</li>
+              <li>'Add Resource' type ('upload' or 'link') chosen
                 <ul>
-                <li>If upload ...</li>
-                <li>If link ...</li>
+                <li>If 'upload', local file selected</li>
+                <li>If 'link', must be valid URL</li>
                 </ul>
             </ul>
           </li>

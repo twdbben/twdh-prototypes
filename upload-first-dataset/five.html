@@ -97,7 +97,11 @@
               <div class="row">
                 <div class="col col-md-6">
                   <label for="field-update-type">Update Type</label>
-                  <p><input type="radio" value="automatic"> Automatic<br/><p><input type="radio" value="manual"> Manual</p>
+                  <p>
+                  <label for="update-type-none"><input type="radio" name="update-type" id="update-type-none" value="none"> None</label><br/>
+                  <label for="update-type-automatic"><input type="radio" name="update-type" id="update-type-automatic" value="automatic"> Automatic</label><br/>
+                  <label for="update-type-manual"><input type="radio" name="update-type" id="update-type-manual" value="manual"> Manual</label>
+                  </p>
                 </div>
               </div>
               <div class="row">
@@ -112,6 +116,24 @@
                   <div class="field-instruction">
                     How often updates occur
                   </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-6">
+                  <label for="field-next-update">Next Update <span class="not-bold">(optional)</span></label>
+                  <select name="field-next-update" class="form-control">
+                    <option value="">Choose Date</option>
+                  </select>
+                  <div class="field-instruction">
+                    Date of the next expected data update
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-6">
+                  <label for="field-next-update">
+                    <input type="checkbox"> Get reminder emails for data updates.
+                  </label>
                 </div>
               </div>
             </fieldset>
@@ -129,19 +151,27 @@
       <div class="overview">
         <h3>Step 5: Quality & Usage Information</h3>
         <ul>
-          <li>Questions
+          <li>Details
             <ul>
-              <li></li>
+              <li>'Get reminder emails for data updates.' checkbox displays conditionally dependent on having set the 'Next Update' date</li>
             </ul>
           </li>
           <li>Validation Criteria
             <ul>
-              <li></li>
+              <li>'Quality Control Level' selected</li>
+              <li>'Update Type' selected</li>
+              <li>'Update Frequency' selected</li>
+              <li>'Next Update', if provided, set to a valid future date</li>
             </ul>
           </li>
           <li>Activity Stream
             <ul>
-              <li></li>
+              <li>'Collection Method' changed</li>
+              <li>'Quality Control Level' changed</li>
+              <li>'Quality Assurance Notes' changed</li>
+              <li>'Update Type' changed</li>
+              <li>'Update Frequency' changed</li>
+              <li>'Next Update' changed</li>
             </ul>
           </li>
         </ul>
